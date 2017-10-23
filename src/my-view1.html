@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+    <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      #my_typeform {
+        border-style: none;
+        width: 100%;
+        height: 100%;
+      }
+
+    </style>
+
+<div class="wrapper">
+
+  <div class="box content">
+      <iframe id="my_typeform" src="https://woisme.typeform.com/to/P63x7y"></iframe>
+      <!-- <div class="typeform-widget" data-url="https://woisme.typeform.com/to/P63x7y" style="width: 100%; height: 500px;" > </div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> -->
+  </div>
+
+  <div class="box sidebar">
+      <div class="smallbox one">1</div>
+      <div class="smallbox two">2</div>
+      <div class="smallbox three">3</div>
+      <div class="smallbox four">4</div>
+      <div class="smallbox five">5</div>
+      <div class="smallbox six">6</div>
+  </div>
+  
+  <div class="box footer">
+    Footer
+  </div>
+</div>
+
+
+  </template>
+
+    <script>
+        class MyView1 extends Polymer.Element {
+            static get is() {
+                return 'my-view1';
+            }
+        }
+
+        window.customElements.define(MyView1.is, MyView1);
+    </script>
+</dom-module>
