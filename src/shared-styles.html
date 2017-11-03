@@ -48,53 +48,55 @@ html, body {
         grid-column: 1;
         grid-row: 1;
         background-color: #8ac7e2;
-    }
+  }
 
   .two {
         grid-column: 2;
         grid-row: 1;
         background-color: #cea9e8;
-    }
+  }
 
   .three {
         grid-column: 1;
         grid-row: 2;
         background-color:#ffb087;
-    }
+  }
+
   .four {
         grid-column: 2;
         grid-row: 2;
         background-color: #56c5e2;
-    }
+  }
 
   .five {
         grid-column: 1;
         grid-row: 3;
         background-color:#f5aef5;
-    }
+  }
 
   .six {
         grid-column: 2;
         grid-row: 3;
         background-color: #8ab6f4;
-    }
+  }
 
   .seven {
         grid-column: 1;
         grid-row: 4;
         background-color: #c5cfd4;
-    }
+  }
 
   .eight {
         grid-column: 2;
         grid-row: 4;
         background-color: #49b882;
-    }  
-    #my_typeform {
+  }
+
+  #my_typeform {
         border-style: none;
         width: 100%;
         height: 100%;
-      }
+  }
 
 	@media only screen and (max-width: 600px)  {
 	.wrapper {
@@ -104,57 +106,62 @@ html, body {
     "sidebar"
 		"footer";
 	}
+
   #my_typeform {
         height: 400px;
         width: 100%;
-    }
+  }
+
   .sidebar {
         padding-top: 0;
-    }
+  }
+
   .content {
         margin: 0px 10px 0px 10px;
-    }
+  }
+
   :host {
         padding: 10px 0px 10px 0px;
-    }
+  }
 
 	}
 
 	@media only screen and (min-width: 600px)   {
-		.wrapper {
-      grid-gap: 5px;
-			grid-template-columns: 400px auto 475px;
-			grid-template-areas:
-			"content content sidebar"
-			"footer  footer  footer";
-			max-width: 1400px;
-      grid-template-rows: 510px 200px;
+		  .wrapper {
+        grid-gap: 5px;
+        grid-template-columns: 400px auto 475px;
+        grid-template-areas:
+        "content content sidebar"
+        "footer  footer  footer";
+        max-width: 1400px;
+        grid-template-rows: 510px 200px;
 		}
-    .footer {
-    width: 100%;
-}
+      .footer {
+        width: 100%;
+    }
 	}
 
-.box {
-  font-size: 150%; 
-}
+  .box {
+    font-size: 150%; 
+  }
 
-.smallbox {
+  .smallbox {
   color: #FFF;
   border-radius: 5px;
   padding: 20px;
   font-size: 80%;
-}
+  }
 
-.footer {
+  .footer {
   color: #fff;
   background-color: var(--app-primary-color);
   padding: 20px;
   font-size: 80%;
-}
-.foot {
+  }
+
+  .foot {
   width: 90%;
-}
+  }
     </style>
   </template>
 </dom-module>
