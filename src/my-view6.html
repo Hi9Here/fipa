@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view6">
+    <template>
+  <style include="shared-styles">
+    :host {
+      display: block;
+      padding: 15px 0px 10px 0px;
+    }
+    
+  </style>
+
+<div class="wrapper">
+
+<div class="box content">
+    <iframe id="my_typeform" src="https://woisme.typeform.com/to/P63x7y"></iframe>
+</div>
+
+<div class="box sidenotes">
+  <div class="toptitle">
+    <iron-icon icon="home"></iron-icon>
+    <h1>Title 5</h1>
+  </div>
+    <p>Rather than a loan, we offer unsecured funding by purchasing a portion of your future card sales.    
+    This smarter money management provides flexibility not only catering for your existing requirements but for your future needs. This means you can scale your business your way. And because you're not tied to any fixed amount, you repay less when things are slow and more when business is flourishing.</p>
+    
+    <p>Eligibility is simple; based on your card sales history, your business can access finance equalling its average monthly turnover of credit card transactions. And unsecured funding means you won’t need to use an asset such as a property to secure against borrowing.</p>
+    
+    <p>There are no interest charges, no hidden fees, no need for a perfect credit score and because it's not a loan your credit score will not be affected.</p>
+    
+    <p>75% of all applications are successful and a pre-approved decision is made on average in 24hrs.</p>
+</div>
+
+<div class="box footer">
+    <div class="foot">
+        <p>All rights reserved First Payment Merchant Services Limited (Company No. 07795635), 3rd Floor Norwich House, Knoll Road, Camberley, Surrey, GU15 3RQ.</p>
+        <p>
+        First Payment Finance is not an FCA regulated product.</p>
+    </div>
+</div>
+</div>
+
+
+</template>
+
+    <script>
+        class MyView6 extends Polymer.Element {
+            static get is() {
+                return 'my-view6';
+            }
+        }
+
+        window.customElements.define(MyView6.is, MyView6);
+    </script>
+</dom-module>
