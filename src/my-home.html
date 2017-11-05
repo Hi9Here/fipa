@@ -1,7 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="my-view1">
+<dom-module id="my-home">
     <template>
     <style include="shared-styles">
       :host {
@@ -20,14 +20,14 @@
   </div>
 
   <div class="box sidebar">
-        <a href="/view2" class="smallbox one">Funding</a>
-      <a href="/view3" class="smallbox two">Energy</a>
-      <a href="/view4" class="smallbox three">Telecoms</a>
-      <a href="/view5" class="smallbox four">Chip & Pin</a>
-      <a href="/view6" class="smallbox five">Virtual</a>
-      <a href="/view7" class="smallbox six">Epos</a>
-      <a href="/view8" class="smallbox seven">About Us</a>
-      <a href="/view9" class="smallbox eight">Contact Us</a>
+        <a href="/funding" class="smallbox one">Funding</a>
+      <a href="/energy" class="smallbox two">Energy</a>
+      <a href="/telecoms" class="smallbox three">Telecoms</a>
+      <a href="/chipandpin" class="smallbox four">Chip & Pin</a>
+      <a href="/virtual" class="smallbox five">Virtual</a>
+      <a href="/epos" class="smallbox six">Epos</a>
+      <a href="/aboutus" class="smallbox seven">About Us</a>
+      <a href="/contactus" class="smallbox eight">Contact Us</a>
   </div>
   
   <div class="box footer">
@@ -43,12 +43,12 @@
   </template>
 
     <script>
-        class MyView1 extends Polymer.Element {
+        class MyHome extends Polymer.Element {
             static get is() {
-                return 'my-view1';
+                return 'my-home';
             }
         }
 
-        window.customElements.define(MyView1.is, MyView1);
+        window.customElements.define(MyHome.is, MyHome);
     </script>
 </dom-module>

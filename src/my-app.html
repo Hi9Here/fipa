@@ -14,10 +14,15 @@
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="my-icons.html">
 
-<link rel="lazy-import" href="my-view1.html">
-<link rel="lazy-import" href="my-view2.html">
-<link rel="lazy-import" href="my-view3.html">
-<link rel="lazy-import" href="my-view404.html">
+<link rel="lazy-import" href="my-home.html">
+<link rel="lazy-import" href="my-energy.html">
+<link rel="lazy-import" href="my-funding.html">
+<link rel="lazy-import" href="my-telecoms.html">
+<link rel="lazy-import" href="my-chipandpin.html">
+<link rel="lazy-import" href="my-virtual.html">
+<link rel="lazy-import" href="my-epos.html">
+<link rel="lazy-import" href="my-aboutus.html">
+<link rel="lazy-import" href="my-contactus.html">
 
 <dom-module id="my-app">
     <template>
@@ -110,15 +115,15 @@
       <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="[[rootPath]]view1">Home</a>
-          <a name="view2" href="[[rootPath]]view2">Funding</a>
-          <a name="view3" href="[[rootPath]]view3">Energy</a>
-          <a name="view4" href="[[rootPath]]view4">Telecoms</a>
-          <a name="view5" href="[[rootPath]]view5">Chip & Pin</a>
-          <a name="view6" href="[[rootPath]]view6">Virtual</a>
-          <a name="view7" href="[[rootPath]]view7">EPOS</a>
-          <a name="view8" href="[[rootPath]]view8">About Us</a>
-          <a name="view9" href="[[rootPath]]view9">Contact Us</a>
+          <a name="home" href="[[rootPath]]home">Home</a>
+          <a name="energy" href="[[rootPath]]view3">Energy</a>
+          <a name="funding" href="[[rootPath]]funding">Funding</a>
+          <a name="telecoms" href="[[rootPath]]view4">Telecoms</a>
+          <a name="chipandpin" href="[[rootPath]]view5">Chip & Pin</a>
+          <a name="virtual" href="[[rootPath]]view6">Virtual</a>
+          <a name="epos" href="[[rootPath]]view7">EPOS</a>
+          <a name="aboutus" href="[[rootPath]]view8">About Us</a>
+          <a name="contactus" href="[[rootPath]]view9">Contact Us</a>
         </iron-selector>
       </app-drawer>
 
@@ -156,15 +161,15 @@
     </template>
 
     <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
-        <my-view1 name="view1"></my-view1>
-        <my-view2 name="view2"></my-view2>
-        <my-view3 name="view3"></my-view3>
-        <my-view4 name="view4"></my-view4>
-        <my-view5 name="view5"></my-view5>
-        <my-view6 name="view6"></my-view6>
-        <my-view7 name="view7"></my-view7>
-        <my-view8 name="view8"></my-view8>
-        <my-view9 name="view9"></my-view9>
+        <my-home name="home"></my-home>
+        <my-energy name="energy"></my-energy>
+        <my-funding name="funding"></my-funding>
+        <my-telecoms name="telecoms"></my-telecoms>
+        <my-chipandpin name="chipandpin"></my-chipandpin>
+        <my-virtual name="virtual"></my-virtual>
+        <my-epos name="epos"></my-epos>
+        <my-aboutus name="aboutus"></my-aboutus>
+        <my-contactus name="contactus"></my-contactus>
         <my-view404 name="view404"></my-view404>
     </iron-pages>
     </app-header-layout>
@@ -200,8 +205,8 @@
 
             _routePageChanged(page) {
                 // If no page was found in the route data, page will be an empty string.
-                // Default to 'view1' in that case.
-                this.page = page || 'view1';
+                // Default to 'home' in that case.
+                this.page = page || 'home';
 
                 // Close a non-persistent drawer when the page & route are changed.
                 if (!this.$.drawer.persistent) {
