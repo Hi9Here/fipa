@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-aboutus">
+    <template>
+  <style include="shared-styles">
+    :host {
+      display: block;
+      padding: 15px 0px 10px 0px;
+    }
+    
+  </style>
+
+<div class="wrapper">
+
+<div class="box content">
+    <iframe id="my_typeform" src="https://woisme.typeform.com/to/P63x7y"></iframe>
+</div>
+
+<div class="box sidenotes">
+  <div class="toptitle">
+    <iron-icon icon="home"></iron-icon>
+    <h1>About Us</h1>
+  </div>
+    <p>First Payment Finance is one of the fastest growing Merchant Service Providers in the UK. We provide chip and pin devices, EPOS solutions, utility management options and unsecured business funding to thousands of customers.</p>
+
+    <p>Our mission is to provide innovative, smarter solutions for SME's, supported by high customer service levels and at a minimal cost to our customers.</p>
+       
+</div>
+
+<div class="box footer">
+    <div class="foot">
+        <p>All rights reserved First Payment Merchant Services Limited (Company No. 07795635), 3rd Floor Norwich House, Knoll Road, Camberley, Surrey, GU15 3RQ.</p>
+        <p>
+        First Payment Finance is not an FCA regulated product.</p>
+    </div>
+</div>
+</div>
+
+
+</template>
+
+    <script>
+        class MyAboutus extends Polymer.Element {
+            static get is() {
+                return 'my-aboutus';
+            }
+        }
+
+        window.customElements.define(MyAboutus.is, MyAboutus);
+    </script>
+</dom-module>

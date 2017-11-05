@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-contactus">
+    <template>
+  <style include="shared-styles">
+    :host {
+      display: block;
+      padding: 15px 0px 10px 0px;
+    }
+    
+  </style>
+
+<div class="wrapper">
+
+<div class="box content">
+    <iframe id="my_typeform" src="https://woisme.typeform.com/to/P63x7y"></iframe>
+</div>
+
+<div class="box sidenotes">
+  <div class="toptitle">
+    <iron-icon icon="home"></iron-icon>
+    <h1>Contact Us</h1>
+  </div>
+    <p>Telephone 01276 7822222</p>
+    <p>Mail </p>
+    <p>Post 3rd Floor Norwich House, Knoll Road, Camberley, Surrey, GU15 3RQ.</p>
+    <p>Why not let us contact you. Just complete the form and we'll call or email you back!
+</div>
+
+<div class="box footer">
+    <div class="foot">
+        <p>All rights reserved First Payment Merchant Services Limited (Company No. 07795635), 3rd Floor Norwich House, Knoll Road, Camberley, Surrey, GU15 3RQ.</p>
+        <p>
+        First Payment Finance is not an FCA regulated product.</p>
+    </div>
+</div>
+</div>
+
+
+</template>
+
+    <script>
+        class MyContactus extends Polymer.Element {
+            static get is() {
+                return 'my-contactus';
+            }
+        }
+
+        window.customElements.define(MyContactus.is, MyContactus);
+    </script>
+</dom-module>
