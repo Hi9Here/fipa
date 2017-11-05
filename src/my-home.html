@@ -11,6 +11,36 @@
       a {
           text-decoration: none;
       }
+      .sidebar img {
+        height: 50px;
+        width: 50px;
+        float: left;
+        margin: auto 0;
+      }
+      span {
+        float: right;
+        margin: 10px 0px;
+      }
+      .smallbox {
+          height: 50px;
+      }
+      @media only screen and (max-width: 600px)  {
+      .sidebar img {
+        height: 30px;
+        width: 30px;
+        float: left;
+        margin: auto 0;
+      }
+      span {
+        float: right;
+        margin: 5px 0px;
+        font-size: 14px;
+      }
+      .smallbox {
+          height: 30px;
+      }
+      }
+
     </style>
 
 <div class="wrapper">
@@ -20,14 +50,14 @@
   </div>
 
   <div class="box sidebar">
-        <a href="/funding" class="smallbox one">Funding</a>
-      <a href="/energy" class="smallbox two">Energy</a>
-      <a href="/telecoms" class="smallbox three">Telecoms</a>
-      <a href="/chipandpin" class="smallbox four">Chip & Pin</a>
-      <a href="/virtual" class="smallbox five">Virtual</a>
-      <a href="/epos" class="smallbox six">Epos</a>
-      <a href="/aboutus" class="smallbox seven">About Us</a>
-      <a href="/contactus" class="smallbox eight">Contact Us</a>
+        <a href="/funding" class="smallbox one"><img src="images/icons/financewhite.png" alt=""><span>Funding</span></a>
+        <a href="/energy" class="smallbox two"><img src="images/icons/energywhite.png" alt=""><span>Energy</span></a>
+        <a href="/telecoms" class="smallbox three"><img src="images/icons/telecomswhite.png" alt=""><span>Telecoms</span></a>
+        <a href="/chipandpin" class="smallbox four"><img src="images/icons/chipandpinwhite.png" alt=""><span>Chip & Pin</span></a>
+        <a href="/virtual" class="smallbox five"><img src="images/icons/virtualcopywhite.png" alt=""><span>Virtual</span></a>
+        <a href="/epos" class="smallbox six"><img src="images/icons/eposcopywhite.png" alt=""><span>EPOS</span></a>
+        <a href="/aboutus" class="smallbox seven"><img src="images/icons/energywhite.png" alt=""><span>About Us</span></a>
+        <a href="/contactus" class="smallbox eight"><img src="images/icons/contactcopywhite.png" alt=""><span>Contact Us</span></a>
   </div>
   
   <div class="box footer">
