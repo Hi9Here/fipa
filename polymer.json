@@ -3,14 +3,14 @@
     "shell": "src/my-app.html",
     "fragments": [
         "src/my-home.html",
-        "src/my-view2.html",
-        "src/my-view3.html",
-        "src/my-view4.html",
-        "src/my-view5.html",
-        "src/my-view6.html",
-        "src/my-view7.html",
-        "src/my-view8.html",
-        "src/my-view9.html",
+        "src/my-energy.html",
+        "src/my-funding.html",
+        "src/my-telecoms.html",
+        "src/my-chipandpin.html",
+        "src/my-virtual.html",
+        "src/my-epos.html",
+        "src/my-aboutus.html",
+        "src/my-contactus.html",
         "src/my-view404.html"
     ],
     "sources": [
