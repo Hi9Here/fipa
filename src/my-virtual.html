@@ -2,7 +2,7 @@
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-virtual">
-    <template>
+  <template>
   <style include="shared-styles">
     :host {
       display: block;
@@ -31,20 +31,24 @@
     <p>Do your customers want to make payments by phone or mail? If so First Payment has the solution - their virtual terminal. It works on a laptop, tablet or smartphone.</p>
 
     <p>Features Include:</p>
-    <li>Simple set up</li>
-    <li>Log in pretty much anywhere</li>
-    <li>Ability to process multiple payments</li>
-    <li>Ability to process and refund payments</li>
-    <li>Accept payments in different currencies</li>
-    <li>Advanced card verification plus proactive security to prevent fraud</li>
+    <ul>
+        <li>Simple set up</li>
+        <li>Log in pretty much anywhere</li>
+        <li>Ability to process multiple payments</li>
+        <li>Ability to process and refund payments</li>
+        <li>Accept payments in different currencies</li>
+        <li>Advanced card verification plus proactive security to prevent fraud</li>
+    </ul>
 
     <p>If you’re thinking of starting a business online or want to offer current customers a simpler way to pay, we offer a range of payment pages that make accepting cards and digital transactions safe and secure.</p>
 
     <p>Features Include:</p>
-    <li>Integration with most popular ecommerce platforms and shopping carts</li>
-    <li>Accepts all major cards and payment methods</li>
-    <li>Customised and secured  payment page, compliant hosted with PCI standards</li>
-    <li>Reporting for business management</li>
+    <ul>
+        <li>Integration with most popular ecommerce platforms and shopping carts</li>
+        <li>Accepts all major cards and payment methods</li>
+        <li>Customised and secured  payment page, compliant hosted with PCI standards</li>
+        <li>Reporting for business management</li>
+    </ul>
     
 </div>
 
@@ -60,13 +64,13 @@
 
 </template>
 
-    <script>
-        class MyVirtual extends Polymer.Element {
-            static get is() {
-                return 'my-virtual';
-            }
-        }
+  <script>
+    class MyVirtual extends Polymer.Element {
+      static get is() {
+        return 'my-virtual';
+      }
+    }
 
-        window.customElements.define(MyVirtual.is, MyVirtual);
-    </script>
+    window.customElements.define(MyVirtual.is, MyVirtual);
+  </script>
 </dom-module>
