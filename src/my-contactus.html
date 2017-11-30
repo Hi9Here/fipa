@@ -2,7 +2,7 @@
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-contactus">
-    <template>
+  <template>
   <style include="shared-styles">
     :host {
       display: block;
@@ -13,6 +13,9 @@
         background-color: #c60000;
         color: white;
         padding: 0px 5px 5px 10px;
+    }
+    h2 {
+        font-weight: 300;
     }
     
   </style>
@@ -28,9 +31,9 @@
     <img src="images/icons/contactcopywhite.png" alt="">
     <h1>Contact Us</h1>
   </div>
-    <h6>Phone: 01276 7822222</h6>
-    <h6>Email: admin@firstpayments.co.uk</h6>
-    <h6>Post: 3rd Floor Norwich House, Knoll Road, Camberley, Surrey, GU15 3RQ.</h6>
+    <h2>Phone: 01276 7822222</h2>
+    <h2>Email: admin@firstpayments.co.uk</h2>
+    <h2>Post: 3rd Floor Norwich House, Knoll Road, Camberley, Surrey, GU15 3RQ.</h2>
 </div>
 
 <div class="box footer">
@@ -45,13 +48,13 @@
 
 </template>
 
-    <script>
-        class MyContactus extends Polymer.Element {
-            static get is() {
-                return 'my-contactus';
-            }
-        }
+  <script>
+    class MyContactus extends Polymer.Element {
+      static get is() {
+        return 'my-contactus';
+      }
+    }
 
-        window.customElements.define(MyContactus.is, MyContactus);
-    </script>
+    window.customElements.define(MyContactus.is, MyContactus);
+  </script>
 </dom-module>
