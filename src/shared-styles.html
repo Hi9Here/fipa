@@ -46,14 +46,14 @@ html, body {
 .sidebar {
 		grid-area: sidebar;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
+    padding: 10px 0px 10px 10px;
 	}
 
 	.content {
 		grid-area: content;
-    margin: 0px 10px 5px 10px;
+    margin: 0px 0px 5px 10px;
 	}
 
 	.footer {
@@ -165,16 +165,12 @@ html, body {
         "content content sidebar"
         "footer  footer  footer";
         max-width: 1400px;
-        grid-template-rows: 550px 200px;
+        grid-template-rows: 560px 200px;
 		}
       .footer {
         width: 100%;
     }
 	}
-
-      .box {
-          font-size: 150%; 
-      }
 
       .smallbox {
       color: #FFF;
@@ -187,7 +183,12 @@ html, body {
       color: #fff;
       background-color: var(--app-primary-color);
       padding: 20px;
-      font-size: 80%;
+      height: 100px;
+      line-height: 1;
+      }
+      
+      p {
+      font-size: 14px;;
       }
 
       .foot {

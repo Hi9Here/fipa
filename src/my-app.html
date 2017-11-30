@@ -25,7 +25,7 @@
 <link rel="lazy-import" href="my-contactus.html">
 
 <dom-module id="my-app">
-    <template>
+  <template>
     <style>
       :host {
         --app-primary-color: #69933C;
@@ -114,7 +114,7 @@
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="[[rootPath]]home">Home</a>
-          <a name="energy" href="[[rootPath]]view3">Energy</a>
+          <a name="energy" href="[[rootPath]]energy">Energy</a>
           <a name="funding" href="[[rootPath]]funding">Funding</a>
           <a name="telecoms" href="[[rootPath]]telecoms">Telecoms</a>
           <a name="chipandpin" href="[[rootPath]]chipandpin">Chip & Pin</a>
@@ -145,8 +145,8 @@
                 </app-header>
     </template>
 
-    <!-- Narrow View -->
-    <template is="dom-if" if="{{!wide}}">
+  <!-- Narrow View -->
+  <template is="dom-if" if="{{!wide}}">
                       <app-header slot="header" condenses reveals effects="waterfall">
                         <app-toolbar>
                           <paper-icon-button icon="my-icons:menu"> drawer-toggle></paper-icon-button>
@@ -158,75 +158,75 @@
                       </app-header>
     </template>
 
-    <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
-        <my-home name="home"></my-home>
-        <my-energy name="energy"></my-energy>
-        <my-funding name="funding"></my-funding>
-        <my-telecoms name="telecoms"></my-telecoms>
-        <my-chipandpin name="chipandpin"></my-chipandpin>
-        <my-virtual name="virtual"></my-virtual>
-        <my-epos name="epos"></my-epos>
-        <my-aboutus name="aboutus"></my-aboutus>
-        <my-contactus name="contactus"></my-contactus>
-        <my-view404 name="view404"></my-view404>
-    </iron-pages>
-    </app-header-layout>
-    </app-drawer-layout>
-    </template>
+  <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
+    <my-home name="home"></my-home>
+    <my-energy name="energy"></my-energy>
+    <my-funding name="funding"></my-funding>
+    <my-telecoms name="telecoms"></my-telecoms>
+    <my-chipandpin name="chipandpin"></my-chipandpin>
+    <my-virtual name="virtual"></my-virtual>
+    <my-epos name="epos"></my-epos>
+    <my-aboutus name="aboutus"></my-aboutus>
+    <my-contactus name="contactus"></my-contactus>
+    <my-view404 name="view404"></my-view404>
+  </iron-pages>
+  </app-header-layout>
+  </app-drawer-layout>
+  </template>
 
-    <script>
-        class MyApp extends Polymer.Element {
-            static get is() {
-                return 'my-app';
-            }
+  <script>
+    class MyApp extends Polymer.Element {
+      static get is() {
+        return 'my-app';
+      }
 
-            static get properties() {
-                return {
-                    page: {
-                        type: String,
-                        reflectToAttribute: true,
-                        observer: '_pageChanged',
-                    },
-                    routeData: Object,
-                    subroute: String,
-                    // This shouldn't be neccessary, but the Analyzer isn't picking up
-                    // Polymer.Element#rootPath
-                    rootPath: String,
-                };
-            }
+      static get properties() {
+        return {
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged',
+          },
+          routeData: Object,
+          subroute: String,
+          // This shouldn't be neccessary, but the Analyzer isn't picking up
+          // Polymer.Element#rootPath
+          rootPath: String,
+        };
+      }
 
-            static get observers() {
-                return [
-                    '_routePageChanged(routeData.page)',
-                ];
-            }
+      static get observers() {
+        return [
+          '_routePageChanged(routeData.page)',
+        ];
+      }
 
-            _routePageChanged(page) {
-                // If no page was found in the route data, page will be an empty string.
-                // Default to 'home' in that case.
-                this.page = page || 'home';
+      _routePageChanged(page) {
+        // If no page was found in the route data, page will be an empty string.
+        // Default to 'home' in that case.
+        this.page = page || 'home';
 
-                // Close a non-persistent drawer when the page & route are changed.
-                if (!this.$.drawer.persistent) {
-                    this.$.drawer.close();
-                }
-            }
-
-            _pageChanged(page) {
-                // Load page import on demand. Show 404 page if fails
-                var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
-                Polymer.importHref(
-                    resolvedPageUrl,
-                    null,
-                    this._showPage404.bind(this),
-                    true);
-            }
-
-            _showPage404() {
-                this.page = 'view404';
-            }
+        // Close a non-persistent drawer when the page & route are changed.
+        if (!this.$.drawer.persistent) {
+          this.$.drawer.close();
         }
+      }
 
-        window.customElements.define(MyApp.is, MyApp);
-    </script>
+      _pageChanged(page) {
+        // Load page import on demand. Show 404 page if fails
+        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+        Polymer.importHref(
+          resolvedPageUrl,
+          null,
+          this._showPage404.bind(this),
+          true);
+      }
+
+      _showPage404() {
+        this.page = 'view404';
+      }
+    }
+
+    window.customElements.define(MyApp.is, MyApp);
+  </script>
 </dom-module>
