@@ -2,7 +2,7 @@
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-home">
-    <template>
+  <template>
     <style include="shared-styles">
       :host {
         display: block;
@@ -15,14 +15,11 @@
         height: 50px;
         width: 50px;
         float: left;
-        margin: auto 0;
+        margin: 15px 0px 0px 0px;
       }
       span {
         float: right;
-        margin: 10px 0px;
-      }
-      .smallbox {
-          height: 50px;
+        margin: 20px 0px;
       }
       @media only screen and (max-width: 600px)  {
       .sidebar img {
@@ -35,9 +32,6 @@
         float: right;
         margin: 5px 0px;
         font-size: 14px;
-      }
-      .smallbox {
-          height: 30px;
       }
       .sidebar {
         grid-gap: 10px;
@@ -75,13 +69,13 @@
 
   </template>
 
-    <script>
-        class MyHome extends Polymer.Element {
-            static get is() {
-                return 'my-home';
-            }
-        }
+  <script>
+    class MyHome extends Polymer.Element {
+      static get is() {
+        return 'my-home';
+      }
+    }
 
-        window.customElements.define(MyHome.is, MyHome);
-    </script>
+    window.customElements.define(MyHome.is, MyHome);
+  </script>
 </dom-module>
