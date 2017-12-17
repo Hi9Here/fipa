@@ -28,7 +28,7 @@
   <template>
     <style>
       :host {
-        --app-primary-color: #69933C;
+        --app-primary-color: #d1ac51;
         --app-secondary-color: black;
 
         display: block;
@@ -41,12 +41,14 @@
 
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
+        padding: 0;
+        margin-top: 30px;
       }
 
       app-header {
-        color: #69933C;
+        color: #d1ac51;
         background-color: #fff;
-        height: 80px;
+        height: 100px;
       }
 
       .drawer-list {
@@ -66,12 +68,12 @@
       }
       img {
         height: 80px;
-        margin-top: 20px;
+        margin: 50px 0px 0px 25px;
       }
 
       .tel {
         font-size: 30px;
-        margin: 60px 50px 50px 50px;
+        margin: 80px 50px 50px 50px;
         font-weight: 300;
       }
 
@@ -137,7 +139,7 @@
                     <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
                     <div main-title>
                       <a href="/">
-                        <img src="images/logosmall.png">
+                        <img src="images/fipa-logo.png">
                       </a>
                     </div>
                     <div class="tel"><a href="tel:01276605690">01276 605 690</a></div>
